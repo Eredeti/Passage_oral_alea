@@ -1,0 +1,211 @@
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>Tirage aléatoire Hackathon</title>
+
+        <script src="lib/jquery-3.7.1.min.js"></script>
+        <script src="tirage.js"></script>    
+
+        <style>
+            body{
+                background-color: #cfe1f4;
+            }
+
+            p{
+                margin : 0px;
+                padding : 0px;
+            }
+
+            .carte {
+                border-radius : 15px;
+                background-color: #fdf3d6;
+                text-align: center;
+                align-items: center; /* Centrage vertical */
+                display: flex;
+                margin: 20px;
+                padding: 0px;
+                border: solid 5px  #000;
+                overflow: hidden; /* Prend en compte le bord */
+                height: 200px; 
+            }
+            
+            .titre{
+                display : flex;
+                margin : 0px;
+                padding : 10px;
+                font-family: "Lilita One", sans-serif;
+                font-size : 80px;
+                flex : 1;
+                background-color: #ffd313;
+                color : #1e4f74;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                
+            }
+
+            .name_projet, .name_group, .list_group, .explain{
+                margin : 0px;
+                padding : 5px;
+                color: #1e4f74;
+            }
+
+            .name_projet{
+                font-family: "Lilita One", sans-serif;       
+                text-decoration: underline;
+                font-size : 40px;
+            }
+
+            .explain{
+                font-size : 25px;
+                font-style: italic;
+                font-family: "Lexend", sans-serif;
+            }
+
+            .name_group{
+                font-family: "Lilita One", sans-serif;       
+                font-size : 35px;
+            }
+
+            .list_group{
+                font-family: "Lexend", sans-serif;
+                
+                font-size : 23px;
+            }
+
+            .logo_team{
+                flex : 1;
+                background-color: #f4d786;
+                height: 100%;
+                max-width: 80%;
+                object-fit: contain;
+            }
+            
+            .info{
+                display : flex;
+                flex : 6;
+                flex-direction: column ;
+                padding : 0px;
+                margin : 0px;
+            }
+
+            button {
+                font-family: "Lilita One", sans-serif;
+                font-size: 50px;
+                text-align: center;
+                padding: 10px;
+                background-color: #ffd313;
+                color: #1e4f74;
+                margin: 40px auto 60px auto; /* espace en dessous = 60px */
+                display: block;
+            }
+
+            button:hover {
+                background-color: #1e4f74; /* Green */
+                color: #ffd313;
+            }
+
+            #LogoAsso {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: white;
+                border-radius: 20px;
+                padding: 5px;
+                z-index: 1000;
+            }
+
+            #LogoAsso img {
+                width: 200px;  /* ajuste selon la taille souhaitée */
+                height: auto;
+            }
+
+            
+        </style>
+
+    </head>
+
+    <body>
+        <div class="carte">
+            <p class="titre">1</p>
+                <img class="logo_team" src="img/logo_asso.png">
+                <div class = "info">
+                    <div style="margin:10px">
+                        <p class="name_projet">Titre du Projet</p>
+                        <p class="explain">Explication</p>
+                    </div>
+                    <div style="margin:10px">  
+                        <p class="name_group">Nom de la Team</p>
+                        <p class="list_group">Liste du Groupe</p>
+                    </div>  
+                </div>
+        </div>
+
+        <div class="carte">
+            <p class="titre">2</p>
+            <img class="logo_team" src="img/logo_asso.png">
+                <div class = "info">    
+                    <p class="name_projet">Titre du Projet</p>
+                    <p class="explain">Explication</p>
+                    <p class="name_group">Nom de la Team</p>
+                    <p class="list_group">Liste du Groupe</p>
+                </div>
+        </div>
+
+        <div class="carte">
+            <p class="titre">3</p>
+            <img class="logo_team" src="img/logo_asso.png">
+                <div class = "info">    
+                    <p class="name_projet">Titre du Projet</p>
+                    <p class="explain">Explication</p>
+                    <p class="name_group">Nom de la Team</p>
+                    <p class="list_group">Liste du Groupe</p>
+                </div>
+        </div>
+
+        <div class="carte">
+            <p class="titre">4</p>
+            <img class="logo_team" src="img/logo_asso.png">
+                <div class = "info">    
+                    <p class="name_projet">Titre du Projet</p>
+                    <p class="explain">Explication</p>
+                    <p class="name_group">Nom de la Team</p>
+                    <p class="list_group">Liste du Groupe</p>
+                </div>
+        </div>
+
+        <div class="carte">
+            <p class="titre">5</p>
+            <img class="logo_team" src="img/logo_asso.png">
+                <div class = "info">    
+                    <p class="name_projet">Titre du Projet</p>
+                    <p class="explain">Explication</p>
+                    <p class="name_group">Nom de la Team</p>
+                    <p class="list_group">Liste du Groupe</p>
+                </div>
+        </div>
+
+        <div class="carte">
+            <p class="titre">6</p>
+            <img class="logo_team" src="img/logo_asso.png">
+                <div class = "info">    
+                    <p class="name_projet">Titre du Projet</p>
+                    <p class="explain">Explication</p>
+                    <p class="name_group">Nom de la Team</p>
+                    <p class="list_group">Liste du Groupe</p>
+                </div>
+        </div>
+        
+        <button id="lancer">LANCER</button>
+        <div></div>
+
+        <div id="LogoAsso">
+            <img src="img/logo_asso_overlay.png">
+        </div>
+
+    </body>
+
+
+
+</html>
